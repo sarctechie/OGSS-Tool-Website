@@ -1,37 +1,446 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>PSI Systems</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PSI Systems | Smart Wash Intelligence Suite</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Analytics placeholder: paste your GA/Matomo/etc script here -->
+  <script>
+    // window.PSI_ANALYTICS_ENABLED = true;
+    // Add your analytics snippet here when you're ready.
+  </script>
 </head>
 <body>
-<header class="hero">
-  <h1>AI-Powered Car Wash Safety & Quality</h1>
-  <p>The industry’s first automated Air Pressure Assistant, Wash-Guard, and Quality Checker.</p>
-  <a href="#pricing" class="btn">View Pricing</a>
-</header>
+  <div class="page">
+    <!-- NAVBAR -->
+    <header class="nav">
+      <div class="nav-left">
+        <span class="nav-wordmark">PSI Systems</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#products">Products</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-cta">
+        <button id="btn-open-portal" class="btn btn-ghost">Customer Portal</button>
+        <a href="#pricing" class="btn btn-primary">Get started</a>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
 
-<section class="features">
-  <h2>Our Solutions</h2>
-  <div class="grid">
-    <div><h3>Air Pressure Assistant</h3><p>Instant tire pressure guidance.</p></div>
-    <div><h3>Wash-Guard</h3><p>Vehicle safety scanning.</p></div>
-    <div><h3>Quality Checker</h3><p>AI wash quality grading.</p></div>
+    <!-- MOBILE MENU -->
+    <div class="nav-drawer" id="navDrawer">
+      <a href="#products" class="nav-drawer-item">Products</a>
+      <a href="#pricing" class="nav-drawer-item">Pricing</a>
+      <a href="#how-it-works" class="nav-drawer-item">How it works</a>
+      <a href="#faq" class="nav-drawer-item">FAQ</a>
+      <button class="btn btn-ghost w-100" id="btn-open-portal-mobile">Customer Portal</button>
+      <a href="#pricing" class="btn btn-primary w-100">Get started</a>
+    </div>
+
+    <!-- HERO -->
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">Camera-first intelligence for car washes</p>
+          <h1>Turn every bay into a smart, safety‑first profit engine.</h1>
+          <p class="hero-sub">
+            PSI Systems is a plug‑and‑play suite for operators who want fewer re‑washes,
+            safer tunnels, and happier customers – without hiring a data team.
+          </p>
+          <div class="hero-cta-row">
+            <a href="#pricing" class="btn btn-primary hero-primary">View pricing</a>
+            <button class="btn btn-ghost" id="btn-open-demo-form">Talk to sales</button>
+          </div>
+          <div class="hero-footnote">
+            <span class="dot"></span>
+            Runs on off‑the‑shelf Raspberry Pi, USB/IP cameras & your existing wash stack.
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-card">
+            <h2>Live lane snapshot</h2>
+            <p class="hero-card-copy">Example decision from the system at entry.</p>
+            <div class="hero-metric-grid">
+              <div class="metric">
+                <span class="label">Vehicle</span>
+                <span class="value">Tesla Model 3</span>
+              </div>
+              <div class="metric">
+                <span class="label">Status</span>
+                <span class="value value-pill ok">Allowed</span>
+              </div>
+              <div class="metric">
+                <span class="label">Reason</span>
+                <span class="value">No prohibited accessories detected</span>
+              </div>
+              <div class="metric">
+                <span class="label">Re-wash risk</span>
+                <span class="value value-pill warn">Low · 6%</span>
+              </div>
+            </div>
+            <p class="hero-card-meta">
+              Powered by: <strong>Air Pressure Assistant</strong>, <strong>Wash Guard</strong>, and <strong>Quality Checker</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EMAIL SIGNUP STRIP -->
+      <section class="strip" id="signup">
+        <div class="strip-inner">
+          <div>
+            <p class="strip-eyebrow">Stay in the loop</p>
+            <h2 class="strip-title">Get rollout updates & early adopter discounts.</h2>
+          </div>
+          <form class="strip-form" id="signupForm">
+            <input type="email" id="signupEmail" placeholder="you@example.com" required />
+            <button type="submit" class="btn btn-primary">Notify me</button>
+          </form>
+          <p class="strip-note">No spam. Just product updates and operator‑friendly tips.</p>
+        </div>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section class="section" id="products">
+        <div class="section-header">
+          <h2>Three tools, one lane‑brain.</h2>
+          <p>Pick any module or run the full stack. Everything runs on the same tiny edge device.</p>
+        </div>
+        <div class="cards cards-3">
+          <article class="card product-card">
+            <h3>Air Pressure Assistant</h3>
+            <p class="card-body">
+              Reads the car, suggests safe PSI ranges, and helps staff catch obviously unsafe tires before they hit the tunnel.
+            </p>
+            <ul class="card-list">
+              <li>AI‑assisted vehicle recognition</li>
+              <li>Door‑jamb style PSI recommendations</li>
+              <li>Safety disclaimers built‑in</li>
+              <li>Cloud logging for every recommendation</li>
+            </ul>
+          </article>
+
+          <article class="card product-card">
+            <h3>Wash Guard</h3>
+            <p class="card-body">
+              Camera at entry + rule engine. Flags cars that should not enter: racks, loose panels, incompatible accessories, etc.
+            </p>
+            <ul class="card-list">
+              <li>Visual rule checklist per site</li>
+              <li>“Stop car” vs “Check car” states</li>
+              <li>Configurable risk rules per package</li>
+              <li>Incident evidence stored to the cloud</li>
+            </ul>
+          </article>
+
+          <article class="card product-card">
+            <h3>Quality Checker</h3>
+            <p class="card-body">
+              End‑of‑line check that estimates how clean & dry a car is. Helps staff catch re‑wash candidates on the spot.
+            </p>
+            <ul class="card-list">
+              <li>Wet panels & heavy soil detection</li>
+              <li>Simple pass/fail & “inspect closer” flags</li>
+              <li>Re‑wash stats per package & time of day</li>
+              <li>Feedback loop for training the AI</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="section" id="how-it-works">
+        <div class="section-header">
+          <h2>How it works in the real world</h2>
+          <p>From “what is this thing?” to “we can’t run the wash without it” in about a day.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-badge">1</div>
+            <div class="timeline-content">
+              <h3>Mount camera & Pi</h3>
+              <p>Mount an off‑the‑shelf camera at the entry or exit. Your PSI box (Raspberry Pi + screen) plugs into power and network.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-badge">2</div>
+            <div class="timeline-content">
+              <h3>Connect to PSI cloud</h3>
+              <p>The box securely checks in, loads your site rules, and starts sending anonymized lane events to our servers.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-badge">3</div>
+            <div class="timeline-content">
+              <h3>Staff sees simple screens</h3>
+              <p>Green = good, yellow = double‑check, red = do not send. No AI jargon, just clear “what do I do with this car?” guidance.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-badge">4</div>
+            <div class="timeline-content">
+              <h3>You get analytics</h3>
+              <p>Re‑wash rate, incident logs, PSI suggestions, and rule overrides – all summarized in a web dashboard for managers.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section class="section" id="pricing">
+        <div class="section-header">
+          <h2>Pricing built for real‑world washes</h2>
+          <p>Hardware is yours. Software is a monthly subscription per active site.</p>
+        </div>
+        <div class="cards cards-4">
+          <article class="card pricing-card">
+            <p class="badge">Tier 1</p>
+            <h3>Individual</h3>
+            <p class="price"><span class="amount">$89</span><span class="unit">/ site / month</span></p>
+            <p class="card-body">Choose any single module: Air Pressure Assistant, Wash Guard, or Quality Checker.</p>
+            <ul class="card-list">
+              <li>1 active module per site</li>
+              <li>Lane‑side screen UI</li>
+              <li>Basic email support</li>
+              <li>Up to 150k events / month</li>
+            </ul>
+            <button class="btn btn-outline btn-full" data-tier="Individual">Start with one module</button>
+          </article>
+
+          <article class="card pricing-card pricing-highlight">
+            <p class="badge badge-hot">Most popular</p>
+            <h3>Pro</h3>
+            <p class="price"><span class="amount">$149</span><span class="unit">/ site / month</span></p>
+            <p class="card-body">Pick any two modules and combine them in one box for the same lane.</p>
+            <ul class="card-list">
+              <li>Any 2 modules per site</li>
+              <li>Shared hardware & screen</li>
+              <li>Email + chat support</li>
+              <li>API access for POS & loyalty data</li>
+            </ul>
+            <button class="btn btn-primary btn-full" data-tier="Pro">Upgrade to Pro</button>
+          </article>
+
+          <article class="card pricing-card">
+            <p class="badge">Full suite</p>
+            <h3>Premium</h3>
+            <p class="price"><span class="amount">$199</span><span class="unit">/ site / month</span></p>
+            <p class="card-body">Run all three modules together with unified controls and reporting.</p>
+            <ul class="card-list">
+              <li>Air Pressure + Wash Guard + Quality Checker</li>
+              <li>Priority support & rollout help</li>
+              <li>Multi‑site rollup dashboards</li>
+              <li>Fine‑grained rule configuration</li>
+            </ul>
+            <button class="btn btn-outline btn-full" data-tier="Premium">Get full suite</button>
+          </article>
+
+          <article class="card pricing-card">
+            <p class="badge">For groups & OEM</p>
+            <h3>Enterprise</h3>
+            <p class="price"><span class="amount">Let’s talk</span></p>
+            <p class="card-body">For groups, OEM partners, and platforms who want PSI baked into their tech stack.</p>
+            <ul class="card-list">
+              <li>Custom SLAs & onboarding</li>
+              <li>White‑label & OEM options</li>
+              <li>Direct access to API & event streams</li>
+              <li>Strategy & analytics workshops</li>
+            </ul>
+            <button class="btn btn-outline btn-full" data-tier="Enterprise">Contact sales</button>
+          </article>
+        </div>
+        <p class="pricing-footnote">
+          Hardware estimate: around $400 per lane (Pi + screen + camera & mounts). You own the hardware; we manage the brains.
+        </p>
+      </section>
+
+      <!-- TESTIMONIALS / SOCIAL PROOF -->
+      <section class="section" id="stories">
+        <div class="section-header">
+          <h2>Built with operators, not just for them</h2>
+          <p>Everything in PSI Systems has been shaped by real conversations with tunnel owners and crew leads.</p>
+        </div>
+        <div class="cards cards-3">
+          <article class="card quote-card">
+            <p class="quote">
+              “Our team finally has something that explains <em>why</em> a car is risky, not just a red light. It’s made training new staff way less painful.”
+            </p>
+            <p class="quote-meta">Manager, single‑site express wash</p>
+          </article>
+          <article class="card quote-card">
+            <p class="quote">
+              “Once the crew saw the quality checker catching obviously dirty cars, they started trusting the system. Now they ask for the stats every month.”
+            </p>
+            <p class="quote-meta">Regional operator · 4 sites</p>
+          </article>
+          <article class="card quote-card">
+            <p class="quote">
+              “We started with just the entry guard. Now we’re planning on using PSI on every tunnel we build going forward.”
+            </p>
+            <p class="quote-meta">Owner / developer</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq">
+        <div class="section-header">
+          <h2>Questions operators actually ask</h2>
+          <p>Short answers now, deep dive on a call.</p>
+        </div>
+        <div class="faq-grid">
+          <details class="faq-item" open>
+            <summary>What hardware do I need?</summary>
+            <p>
+              A Raspberry Pi (we recommend Pi 5 with 8–16 GB), a decent SD/SSD, a monitor or touchscreen at the lane,
+              and at least one camera per module (entry, exit, etc.). We’ll send a reference parts list.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Does this replace my POS, tunnel controller, or existing systems?</summary>
+            <p>
+              No. PSI sits beside them as a camera‑driven assistant. It can be integrated, but it doesn’t try to replace your core stack.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Is customer data safe?</summary>
+            <p>
+              Images and events are sent to the cloud over encrypted connections. You control what gets stored and for how long.
+              We don’t sell or share your data with third‑party advertisers.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Can staff override decisions?</summary>
+            <p>
+              Yes. The lane UI always lets staff override with a tap, and those overrides become analytics for future training and tuning.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>What if the internet goes down?</summary>
+            <p>
+              The lane box can continue making decisions using the last downloaded model and rules.
+              It will sync logs when the connection comes back.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I cancel anytime?</summary>
+            <p>
+              Yes. You can cancel a site at the end of its billing month. You still own the hardware and can repurpose it internally.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="section-header">
+        <h2>Talk to the humans behind PSI</h2>
+        <p>Tell us about your site and what you’re trying to fix: damage claims, re‑washes, training, or all of the above.</p>
+      </div>
+      <div class="contact-grid">
+        <form class="card contact-form" id="contactForm">
+          <div class="field-row">
+            <div class="field">
+              <label for="contactName">Name</label>
+              <input id="contactName" name="name" type="text" required />
+            </div>
+            <div class="field">
+              <label for="contactEmail">Email</label>
+              <input id="contactEmail" name="email" type="email" required />
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="contactCompany">Company / Site name</label>
+              <input id="contactCompany" name="company" type="text" />
+            </div>
+            <div class="field">
+              <label for="contactTier">Which tier are you curious about?</label>
+              <select id="contactTier" name="tier">
+                <option value="">Not sure yet</option>
+                <option>Individual</option>
+                <option>Pro</option>
+                <option>Premium</option>
+                <option>Enterprise</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="contactMessage">What problem do you want PSI to help with first?</label>
+            <textarea id="contactMessage" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Send message</button>
+          <p class="contact-footnote">We’ll usually reply in one business day.</p>
+        </form>
+        <div class="card contact-side">
+          <h3>What to expect</h3>
+          <ol class="contact-steps">
+            <li>Quick email to understand your setup.</li>
+            <li>Optional call / video walkthrough of the system.</li>
+            <li>We help you choose a tier and hardware bundle.</li>
+            <li>Trial at one site before rolling out to all lanes.</li>
+          </ol>
+          <p class="contact-meta">
+            Already running a test lane? We can also jump straight into reviewing your lane data and making concrete suggestions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© <span id="year"></span> PSI Systems. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="#signup">Email updates</a>
+      </div>
+    </footer>
   </div>
-</section>
 
-<section id="pricing" class="pricing">
-  <h2>Pricing</h2>
-  <div class="grid">
-    <div class="card"><h3>Individual</h3><p>$149/mo</p></div>
-    <div class="card"><h3>Pro</h3><p>$249/mo</p></div>
-    <div class="card"><h3>Premium</h3><p>$349/mo</p></div>
-    <div class="card"><h3>Enterprise</h3><p>$499–999/mo</p></div>
+  <!-- SIMPLE PORTAL MODAL PLACEHOLDER -->
+  <div class="modal-backdrop" id="portalModal">
+    <div class="modal">
+      <button class="modal-close" id="portalModalClose" aria-label="Close">×</button>
+      <h2>Customer portal (coming soon)</h2>
+      <p>
+        The portal will let you log in to see analytics, manage sites and devices, and export event data.
+        For now, we’ll set you up manually during onboarding.
+      </p>
+      <button class="btn btn-primary" id="portalModalContact">Talk to sales</button>
+    </div>
   </div>
-</section>
 
-<footer><p>© 2025 PSI Systems</p></footer>
-<script src="script.js"></script>
+  <!-- SALES / DEMO MODAL -->
+  <div class="modal-backdrop" id="demoModal">
+    <div class="modal">
+      <button class="modal-close" id="demoModalClose" aria-label="Close">×</button>
+      <h2>Book a quick PSI walkthrough</h2>
+      <p>
+        Tell us roughly how many sites and lanes you operate and which modules you care about most.
+        We’ll send a link to pick a time for a live demo.
+      </p>
+      <form id="demoForm">
+        <div class="field">
+          <label for="demoEmail">Work email</label>
+          <input id="demoEmail" type="email" required />
+        </div>
+        <div class="field">
+          <label for="demoNotes">Notes (optional)</label>
+          <textarea id="demoNotes" rows="3" placeholder="e.g. 2 sites, mostly worried about damage claims at entry"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Request walkthrough</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
